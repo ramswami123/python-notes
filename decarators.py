@@ -17,3 +17,10 @@ def say_hello():
 say_hello = decorator(say_hello,8,8)
 
 say_hello()
+
+
+# Output:
+
+# 16 :first execution
+# in say hello func
+# 0 :last execution
