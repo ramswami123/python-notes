@@ -499,3 +499,116 @@ Source: Conversation with Copilot, 8/10/2024
 (3) Universal functions (ufunc) — NumPy v2.1 Manual. https://numpy.org/doc/stable/reference/ufuncs.html.
 (4) Universal functions (ufunc) basics — NumPy v2.1 Manual. https://numpy.org/doc/stable/user/basics.ufuncs.html.
 (5) Numpy Functions in Python. https://www.prepbytes.com/blog/python/numpy-functions-in-python/.
+
+Pandas is a powerful library in Python used for data manipulation and analysis. It provides data structures like Series and DataFrame, which are essential for handling structured data. Here are some key built-in functions and features of Pandas:
+
+### **DataFrame Creation**
+- **`read_csv()`**: Reads a CSV file into a DataFrame.
+  ```python
+  import pandas as pd
+  df = pd.read_csv('file.csv')
+  ```
+
+- **`DataFrame()`**: Creates a DataFrame from a dictionary or other data structures.
+  ```python
+  data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+  df = pd.DataFrame(data)
+  ```
+
+### **Data Inspection**
+- **`head()`**: Returns the first n rows of the DataFrame.
+  ```python
+  df.head(5)
+  ```
+
+- **`tail()`**: Returns the last n rows of the DataFrame.
+  ```python
+  df.tail(5)
+  ```
+
+- **`info()`**: Provides a summary of the DataFrame.
+  ```python
+  df.info()
+  ```
+
+- **`describe()`**: Generates descriptive statistics.
+  ```python
+  df.describe()
+  ```
+
+### **Data Manipulation**
+- **`sort_values()`**: Sorts the DataFrame by specified columns.
+  ```python
+  df_sorted = df.sort_values(by='Age')
+  ```
+
+- **`drop()`**: Removes specified labels from rows or columns.
+  ```python
+  df_dropped = df.drop('Age', axis=1)
+  ```
+
+- **`fillna()`**: Fills NA/NaN values using the specified method.
+  ```python
+  df_filled = df.fillna(0)
+  ```
+
+- **`groupby()`**: Groups DataFrame using a mapper or by a Series of columns.
+  ```python
+  grouped = df.groupby('Name').sum()
+  ```
+
+### **Data Selection**
+- **`loc[]`**: Access a group of rows and columns by labels or a boolean array.
+  ```python
+  df_loc = df.loc[df['Age'] > 25]
+  ```
+
+- **`iloc[]`**: Access a group of rows and columns by integer position.
+  ```python
+  df_iloc = df.iloc[0:2, 0:2]
+  ```
+
+### **Merging and Joining**
+- **`merge()`**: Merges DataFrame objects by performing a database-style join.
+  ```python
+  df1 = pd.DataFrame({'key': ['A', 'B'], 'value': [1, 2]})
+  df2 = pd.DataFrame({'key': ['A', 'B'], 'value': [3, 4]})
+  merged_df = pd.merge(df1, df2, on='key')
+  ```
+
+- **`concat()`**: Concatenates pandas objects along a particular axis.
+  ```python
+  df_concat = pd.concat([df1, df2])
+  ```
+
+### **Handling Missing Data**
+- **`isna()`**: Detects missing values.
+  ```python
+  missing = df.isna()
+  ```
+
+- **`dropna()`**: Removes missing values.
+  ```python
+  df_cleaned = df.dropna()
+  ```
+
+### **Time Series**
+- **`to_datetime()`**: Converts argument to datetime.
+  ```python
+  df['date'] = pd.to_datetime(df['date'])
+  ```
+
+- **`date_range()`**: Generates a range of dates.
+  ```python
+  dates = pd.date_range(start='2024-01-01', end='2024-12-31')
+  ```
+
+Pandas is incredibly versatile and can handle a wide range of data manipulation tasks efficiently¹².
+
+Do you have a specific dataset or task you're working on with Pandas?
+
+Source: Conversation with Copilot, 8/10/2024
+(1) General functions — pandas 2.2.3 documentation. https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html.
+(2) Pandas Functions in Python: A Toolkit for Data Analysis - GeeksforGeeks. https://www.geeksforgeeks.org/pandas-functions-in-python/.
+(3) Pandas Standard Library Functions - Programiz. https://www.programiz.com/python-programming/pandas/methods.
+(4) 13 Most Important Pandas Functions for Data Science. https://www.analyticsvidhya.com/blog/2021/05/pandas-functions-13-most-important/.
