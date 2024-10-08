@@ -378,3 +378,124 @@ Source: Conversation with Copilot, 8/10/2024
 (1) sort() in Python - GeeksforGeeks. https://www.geeksforgeeks.org/sort-in-python/.
 (2) How to Use sorted() and .sort() in Python – Real Python. https://realpython.com/python-sort/.
 (3) How to Sort a List in Python Using the sort() Method - Python Tutorial. https://www.pythontutorial.net/python-basics/python-sort-list/.
+
+NumPy is a powerful library in Python used for numerical computing. It provides support for arrays, matrices, and many mathematical functions to operate on these data structures efficiently. Here are some key built-in functions and features of NumPy:
+
+### **Array Creation**
+- **`array()`**: Creates an array.
+  ```python
+  import numpy as np
+  arr = np.array([1, 2, 3])
+  ```
+
+- **`zeros()`**: Creates an array filled with zeros.
+  ```python
+  zeros_arr = np.zeros((2, 3))
+  ```
+
+- **`ones()`**: Creates an array filled with ones.
+  ```python
+  ones_arr = np.ones((2, 3))
+  ```
+
+- **`arange()`**: Creates an array with a range of values.
+  ```python
+  range_arr = np.arange(0, 10, 2)
+  ```
+
+- **`linspace()`**: Creates an array with evenly spaced values.
+  ```python
+  linspace_arr = np.linspace(0, 1, 5)
+  ```
+
+### **Array Manipulation**
+- **`reshape()`**: Reshapes an array without changing its data.
+  ```python
+  reshaped_arr = arr.reshape((3, 1))
+  ```
+
+- **`flatten()`**: Flattens a multi-dimensional array into a 1D array.
+  ```python
+  flat_arr = arr.flatten()
+  ```
+
+### **Mathematical Functions**
+- **`sum()`**: Computes the sum of array elements.
+  ```python
+  total = np.sum(arr)
+  ```
+
+- **`mean()`**: Computes the mean of array elements.
+  ```python
+  average = np.mean(arr)
+  ```
+
+- **`std()`**: Computes the standard deviation.
+  ```python
+  std_dev = np.std(arr)
+  ```
+
+- **`dot()`**: Computes the dot product of two arrays.
+  ```python
+  dot_product = np.dot(arr, arr)
+  ```
+
+### **Universal Functions (ufuncs)**
+- **`add()`**: Adds elements of two arrays.
+  ```python
+  sum_arr = np.add(arr, arr)
+  ```
+
+- **`multiply()`**: Multiplies elements of two arrays.
+  ```python
+  product_arr = np.multiply(arr, arr)
+  ```
+
+- **`sin()`**: Computes the sine of each element.
+  ```python
+  sin_arr = np.sin(arr)
+  ```
+
+- **`exp()`**: Computes the exponential of each element.
+  ```python
+  exp_arr = np.exp(arr)
+  ```
+
+### **Linear Algebra**
+- **`dot()`**: Dot product of two arrays.
+  ```python
+  dot_product = np.dot(arr, arr)
+  ```
+
+- **`inv()`**: Computes the inverse of a matrix.
+  ```python
+  matrix = np.array([[1, 2], [3, 4]])
+  inverse_matrix = np.linalg.inv(matrix)
+  ```
+
+- **`eig()`**: Computes the eigenvalues and eigenvectors.
+  ```python
+  eigenvalues, eigenvectors = np.linalg.eig(matrix)
+  ```
+
+### **Random Sampling**
+- **`rand()`**: Generates an array of random numbers.
+  ```python
+  random_arr = np.random.rand(3, 3)
+  ```
+
+- **`randn()`**: Generates an array of random numbers from a standard normal distribution.
+  ```python
+  normal_arr = np.random.randn(3, 3)
+  ```
+
+These are just a few examples of the many functions available in NumPy. The library is extensive and provides a wide range of functionalities for scientific computing¹².
+
+Do you have a specific task or problem you're looking to solve with NumPy?
+
+Source: Conversation with Copilot, 8/10/2024
+(1) Mathematical functions — NumPy v2.1 Manual. https://numpy.org/doc/stable/reference/routines.math.html.
+(2) NumPy reference — NumPy v2.1 Manual. https://numpy.org/doc/stable/reference/?v=20241007130829.
+(3) Universal functions (ufunc) — NumPy v2.1 Manual. https://numpy.org/doc/stable/reference/ufuncs.html.
+(4) Universal functions (ufunc) basics — NumPy v2.1 Manual. https://numpy.org/doc/stable/user/basics.ufuncs.html.
+(5) Numpy Functions in Python. https://www.prepbytes.com/blog/python/numpy-functions-in-python/.
